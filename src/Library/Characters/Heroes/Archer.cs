@@ -3,7 +3,7 @@ using Library;
 
 namespace Ucu.Poo.RoleplayGame;
 
-public class Archer: BaseCharacter
+public class Archer: BaseCharacter, IHeroes
 {
     public Archer(string nombre)
         : base(nombre)

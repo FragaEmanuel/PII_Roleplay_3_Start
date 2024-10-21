@@ -7,6 +7,8 @@ public class BaseCharacter : ICharacter
     private string name;            //atributo nombre
     private int health;
     private int maxhealth;
+    private int vp;
+    
     protected List<IItem> items = new List<IItem>();
     
     public BaseCharacter(string name)          //metodo constructor
@@ -16,18 +18,21 @@ public class BaseCharacter : ICharacter
         this.Health = maxhealth;            //le da el mismo valor a la vida actual
     }
     public string Name { get; set; }           //metodo para poner o saber nombre
+    public int Vp { get; set; }
 
     public int Health
     {
         get
         {
             return this.health;
-        }
+        } 
         private set
         {
             this.health = value < 0 ? 0 : value;
         }
     }
+    
+    
     
     public virtual void AddItem(IItem item)        //metodo añadir item
     {
@@ -83,8 +88,6 @@ public class BaseCharacter : ICharacter
             return value;
         }
     }
-
-    
     public void Attack(ICharacter target) //metodo para atacar
     {
         int damage = this.AttackValue; //se calcula el daño total
@@ -102,4 +105,6 @@ public class BaseCharacter : ICharacter
         this.health = this.maxhealth; //se asigna la vida maxima a la vida
         Console.WriteLine($"{this.name} ha sido curado. Vida restaurada a: {this.health}"); //se imprime un mensaje
     }
+
+    
 }

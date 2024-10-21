@@ -3,7 +3,7 @@ using Library;
 
 namespace Ucu.Poo.RoleplayGame;
 
-public class Knight: BaseCharacter
+public class Knight: BaseCharacter, IHeroes
 {
 
     public Knight(string nombre)

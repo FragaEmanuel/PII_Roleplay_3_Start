@@ -3,7 +3,7 @@ using Library;
 
 namespace Ucu.Poo.RoleplayGame;
 
-public class Dwarf : BaseCharacter
+public class Dwarf : BaseCharacter, IHeroes
 {
     public Dwarf(string nombre)
         : base(nombre)

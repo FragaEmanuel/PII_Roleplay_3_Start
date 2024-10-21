@@ -9,12 +9,18 @@ public interface ICharacter
     int AttackValue { get; }
 
     int DefenseValue { get; }
+    
+    int Vp { get; set; }
 
     void AddItem(IItem item);
 
     void RemoveItem(IItem item);
-
+    
     void Cure();
 
+    void Attack(ICharacter target);
+
     void ReceiveAttack(int power);
+
+    
 }
