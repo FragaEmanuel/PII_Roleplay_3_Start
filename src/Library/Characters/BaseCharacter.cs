@@ -4,10 +4,11 @@ namespace Library;
 
 public class BaseCharacter : ICharacter
 {
-    private string name;            //atributo nombre
+  
+    protected string name;            //atributo nombre
     private int health;
     private int maxhealth;
-    private int vp;
+    protected int vp;
     
     protected List<IItem> items = new List<IItem>();
     

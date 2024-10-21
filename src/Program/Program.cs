@@ -10,12 +10,17 @@ class Program
         book.AddSpell(new SpellOne());
         book.AddSpell(new SpellOne());
 
+        //Crear Heroes
         Wizard gandalf = new Wizard("Gandalf");
         gandalf.AddItem(book);
-
         Dwarf gimli = new Dwarf("Gimli");
+        Knight knight1 = new Knight("knigt1");
 
-        Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
+        //crear enemigos
+        EnemyArcher Enemy1 = new EnemyArcher("Enemy1", 10);
+        //Console.WriteLine(Enemy1.Name);
+
+        /*Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
         Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");
 
         gimli.ReceiveAttack(gandalf.AttackValue);
@@ -24,6 +29,6 @@ class Program
 
         gimli.Cure();
 
-        Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}");
+        Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}"); */
     }
 }
