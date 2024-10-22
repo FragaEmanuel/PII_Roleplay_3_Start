@@ -1,8 +1,10 @@
+using Library;
+
 namespace Ucu.Poo.RoleplayGame;
 
-public class EnemyArcher: BaseEnemy
+public class EnemyArcher: BaseCharacter, IEnemy
 {
-    public EnemyArcher(string name, int vp) : base(name, vp)
+    public EnemyArcher(string name) : base(name)
     {
         this.AddItem(new Bow());
     }

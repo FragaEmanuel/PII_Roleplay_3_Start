@@ -1,8 +1,10 @@
+using Library;
+
 namespace Ucu.Poo.RoleplayGame;
 
-public class EnemyDwarf : BaseEnemy
+public class EnemyDwarf : BaseCharacter, IEnemy
 {
-    public EnemyDwarf(string name, int vp) : base(name, vp)
+    public EnemyDwarf(string name) : base(name)
     {
         this.AddItem(new Helmet());
     }

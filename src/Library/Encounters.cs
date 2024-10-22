@@ -8,8 +8,8 @@ public class Encounters
     {
     }
 
-    private List<IHeroes> Heroes;
-    private List<IEnemy> Enemies;
+    private List<IHeroes> Heroes = new List<IHeroes>();
+    private List<IEnemy> Enemies = new List<IEnemy>();
     
     public void AddParticipant(IEnemy chara)
     {
