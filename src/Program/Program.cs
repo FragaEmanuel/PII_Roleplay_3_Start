@@ -1,4 +1,5 @@
 ﻿using System;
+using Library;
 
 namespace Ucu.Poo.RoleplayGame.Program;
 
@@ -18,17 +19,16 @@ class Program
 
         //crear enemigos
         EnemyArcher Enemy1 = new EnemyArcher("Enemy1", 10);
-        //Console.WriteLine(Enemy1.Name);
+        EnemyDwarf Enemy2 = new EnemyDwarf("Enemy2", 35);
+        EnemyWizard wizard_enemy = new EnemyWizard("enemy_wizard");
+        wizard_enemy.AddItem(book);
 
-        /*Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-        Console.WriteLine($"Gandalf attacks Gimli with ⚔️ {gandalf.AttackValue}");
-
-        gimli.ReceiveAttack(gandalf.AttackValue);
-
-        Console.WriteLine($"Gimli has ❤️ {gimli.Health}");
-
-        gimli.Cure();
-
-        Console.WriteLine($"Someone cured Gimli. Gimli now has ❤️ {gimli.Health}"); */
+        Encounters encounters1 = new Encounters();
+        encounters1.AddParticipant(gandalf);
+        encounters1.AddParticipant(Enemy2);
+     
+        encounters1.DoEncounter();
+        
+      
     }
 }
