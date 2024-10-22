@@ -10,7 +10,10 @@ public class Encounters
 
     private List<IHeroes> Heroes = new List<IHeroes>();
     private List<IEnemy> Enemies = new List<IEnemy>();
-    
+
+    public List<IHeroes> HeroesList { get; set; }
+    public List<IHeroes> EnemyList { get; set; }
+
     public void AddParticipant(IEnemy chara)
     {
         Enemies.Add(chara);
