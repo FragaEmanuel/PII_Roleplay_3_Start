@@ -18,8 +18,8 @@ class Program
         Knight knight1 = new Knight("knigt1");
 
         //crear enemigos
-        EnemyArcher Enemy1 = new EnemyArcher("Enemy1", 10);
-        EnemyDwarf Enemy2 = new EnemyDwarf("Enemy2", 35);
+        EnemyArcher Enemy1 = new EnemyArcher("Enemy1");
+        EnemyDwarf Enemy2 = new EnemyDwarf("Enemy2");
         EnemyWizard wizard_enemy = new EnemyWizard("enemy_wizard");
         wizard_enemy.AddItem(book);
 
